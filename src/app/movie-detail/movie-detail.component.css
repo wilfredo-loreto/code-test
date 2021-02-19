@@ -1,0 +1,170 @@
+.movie-container {
+  width: 100%;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+}
+.box-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.movie-title {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 58px;
+  text-align: start;
+}
+.movie-text {
+  font-size: 40px;
+  font-weight: 300;
+  color: white;
+  text-align: start;
+}
+.texts-container {
+  height: 100%;
+}
+.poster {
+  margin-top: 270px;
+  width: 250px;
+}
+.small-text-container {
+  margin-right: 15%;
+  margin-left: 2%;
+  border: solid 5px red;
+}
+
+.title-image-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80%;
+  margin-top: -250px;
+  z-index: 1;
+  margin: -250px auto 0 auto;
+}
+.title-container {
+  margin: 15px 0 0 25px;
+
+  z-index: 1;
+}
+
+.title-container h1 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 58px;
+  text-align: start;
+}
+.title-container span {
+  font-size: 34px;
+  letter-spacing: 0.85px;
+  color: #dadada;
+  text-align: center;
+  font-weight: 200;
+  line-height: 0.5;
+}
+
+.title-image-container .image-container {
+  z-index: 1;
+}
+.title-image-container .image-container img {
+  width: 250px;
+}
+.gray-container {
+  width: 100%;
+  min-height: 100%;
+  margin-top: -250px;
+  background-color: #373737;
+}
+.gray-container p {
+}
+.content-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80%;
+  margin: auto;
+}
+.content-container > button {
+  width: 200px;
+  height: 40px;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 24px;
+  background-color: #db3545;
+  border: none;
+  line-height: 0.8;
+  transition: 400ms;
+}
+.content-container > button:hover {
+  cursor: pointer;
+  color: red;
+  background: none;
+}
+.empty-container {
+  min-width: 265px;
+  min-height: 150px;
+}
+.overview-container {
+  margin-top: -125px;
+}
+.overview-container p {
+  color: white;
+  font-size: 18px;
+}
+.tags-container span {
+  color: gray;
+  background-color: #f0f0f0;
+  padding: 5px;
+  border-radius: 6px;
+  margin: 5px;
+}
+.tags-container {
+  margin-top: 12px;
+  width: 200px;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.left-button {
+  width: 200px;
+  height: 60px !important;
+  background: none;
+  border: none;
+}
+.add-movie-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 165px;
+  margin: 40px 0;
+  min-height: 80px;
+}
+
+.add-movie-container:hover {
+  cursor: pointer;
+}
+.add-movie-container:hover span {
+  color: #ff8787;
+}
+
+.add-movie-container span {
+  color: #fff;
+}
+
+.heart-icon {
+  width: 20px;
+}

@@ -1,0 +1,99 @@
+<div
+  class="top-trending-movie-container"
+  [ngStyle]="{
+    'background-image':
+      'url(https://image.tmdb.org/t/p/w500//' +
+      trendingMovies.results[0].backdrop_path +
+      ')'
+  }"
+>
+  <app-search-bar></app-search-bar>
+
+  <div class="texts-container">
+    <div class="box-container">
+      <h1 class="top-trending-movie-title">
+        {{ trendingMovies.results[0].title }}
+      </h1>
+      <span class="top-trending-movie-text">Más Popular</span>
+    </div>
+  </div>
+</div>
+<div class="dark-container">
+  <h3 class="subtitle">Películas populares</h3>
+  <div class="carousel-container">
+    <img
+      class="arrow"
+      src="assets/icons/arrow.png"
+      (click)="moveLeft(indexMovies, 'movies')"
+    />
+    <div
+      class="images-container"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-around"
+    >
+      <a
+        gdArea="card"
+        class="carousel-link"
+        *ngFor="let item of trendingMovies.results | slice: 0:10; let i = index"
+        [attr.id]="'movies' + i"
+        [href]="'/movie/' + item.id"
+        [ngClass]="i >= 4 ? 'hide' : null"
+      >
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500//' + item.poster_path"
+          class="carousel-image"
+        />
+      </a>
+    </div>
+
+    <img
+      class="arrow reversed"
+      src="assets/icons/arrow.png"
+      (click)="moveRight(endMovies, 'movies')"
+    />
+  </div>
+  <h3 class="subtitle">Series populares</h3>
+  <div class="carousel-container">
+    <img
+      class="arrow"
+      src="assets/icons/arrow.png"
+      (click)="moveLeft(indexSeries, 'series')"
+    />
+    <div
+      class="images-container"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-around"
+    >
+      <a
+        class="carousel-link"
+        *ngFor="let item of tvPopular.results | slice: 0:10; let i = index"
+        [attr.id]="'series' + i"
+        [ngClass]="i >= 4 ? 'hide' : null"
+      >
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500//' + item.poster_path"
+          class="carousel-image"
+        />
+      </a>
+    </div>
+
+    <img
+      class="reversed"
+      src="assets/icons/arrow.png"
+      (click)="moveRight(endSeries, 'series')"
+    />
+  </div>
+  <h3 class="subtitle centered">Las películas más aclamadas</h3>
+  <div class="top-rated-container" fxLayout.lt-sm="column">
+    <a
+      class="top-rated-link"
+      *ngFor="let item of topRatedMovies.results | slice: 0:4; let i = index"
+      [href]="'/movie/' + item.id"
+    >
+      <img
+        [src]="'https://image.tmdb.org/t/p/w500//' + item.poster_path"
+        class="top-rated-image"
+      />
+    </a>
+  </div>
+</div>

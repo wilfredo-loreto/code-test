@@ -1,0 +1,41 @@
+<div
+  class="movie-container"
+  [ngStyle]="{
+    'background-image':
+      'url(https://image.tmdb.org/t/p/w500//' + movieData.backdrop_path + ')'
+  }"
+>
+  <app-search-bar></app-search-bar>
+
+  <div class="texts-container">
+    <div class="box-container"></div>
+  </div>
+</div>
+<div class="gray-container">
+  <div class="title-image-container" fxLayout.lt-sm="column">
+    <div class="image-container">
+      <img
+        [src]="'https://image.tmdb.org/t/p/w500//' + movieData.poster_path"
+      />
+      <div class="tags-container">
+        <span *ngFor="let item of movieData.genres">{{ item.name }}</span>
+      </div>
+    </div>
+    <div class="title-container">
+      <h1>{{ movieData.title }}</h1>
+      <span>{{ movieData.tagline }}</span>
+    </div>
+  </div>
+  <div class="content-container" fxLayout.lt-sm="column">
+    <div class="empty-container"></div>
+    <div class="overview-container">
+      <p>{{ movieData.overview }}</p>
+      <div (click)="addMovie(movieData)" class="add-movie-container">
+        <img src="assets/icons/heart.png" class="heart-icon" />
+        <span>Agregar a Favoritas</span>
+      </div>
+    </div>
+
+    <button (click)="backPage()">Regresar</button>
+  </div>
+</div>

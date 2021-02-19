@@ -1,0 +1,31 @@
+.row-container {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(132, 132, 132, 0.8);
+  z-index: 100;
+}
+.row-container input {
+  width: 90%;
+  border: none;
+  font-size: 20px;
+  padding-left: 10px;
+  color: #fff;
+  background: none;
+}
+
+.row-container input:focus {
+  outline: none;
+}
+.row-container input::placeholder {
+  color: #f0f0f0;
+}
+.row-container img {
+  width: 30px;
+}

@@ -1,0 +1,37 @@
+<div class="main-container">
+  <a [href]="'/movie/' + cardInfo.id" class="link-wrapper">
+    <div class="image-background">
+      <img
+        class="movie-image"
+        [src]="'https://image.tmdb.org/t/p/w500//' + cardInfo.poster_path"
+        [alt]="'Image of: ' + cardInfo.title + ' not found'"
+      />
+    </div>
+    <div class="caption-container">
+      <h2>{{ cardInfo.title }}</h2>
+      <span *ngFor="let info of cardInfo.genres">{{ info }}</span>
+      <div class="summary-votes-container">
+        <span>SUMMARY</span>
+        <div class="votes-container">
+          <img src="assets/icons/face.png" />
+          <span>{{ cardInfo.vote_count }}</span>
+          <img src="assets/icons/star.png" />
+          <span>{{ cardInfo.vote_average }} </span>
+        </div>
+      </div>
+      <p class="overview">{{ cardInfo.overview }}</p>
+      <span>{{ cardInfo.release_date }}</span>
+      <div class="card-footer">
+        <div class="video-container">
+          <img src="assets/icons/play.png" />
+          <span> WATCH TRAILER</span>
+        </div>
+        <div class="footer-icons">
+          <img src="assets/icons/save.png" />
+          <img src="assets/icons/tag.png" />
+          <img src="assets/icons/share.png" />
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

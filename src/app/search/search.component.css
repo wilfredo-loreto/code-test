@@ -1,0 +1,25 @@
+.searchbar-container {
+  background-color: #4d4d4d;
+  padding: 15px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 50px;
+}
+
+.gray-container {
+  background-color: #373737;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  color: #ff8787;
+  font-weight: 500;
+  padding: 20px 0 40px;
+  text-align: center;
+}

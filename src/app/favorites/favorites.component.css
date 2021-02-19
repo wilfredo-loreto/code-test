@@ -1,0 +1,103 @@
+.searchbar-container {
+  background-color: #4d4d4d;
+  padding: 15px;
+}
+
+.results-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.result {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 200px;
+  max-height: 300px;
+  width: 600px;
+  margin: 15px 0;
+}
+
+.result a {
+  height: 100%;
+  min-height: 100%;
+}
+
+.gray-container {
+  background-color: #373737;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.title {
+  color: #ff8787;
+  font-weight: 400;
+  padding: 20px 0 40px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.movie-title {
+  color: #fff;
+  font-weight: 300;
+}
+
+.movie-title + span {
+  color: #ff8787;
+}
+
+.texts-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 70%;
+  margin-left: 20px;
+}
+.delete-movie-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 170px;
+  margin: 15px 0;
+}
+
+.delete-movie-container:hover {
+  cursor: pointer;
+}
+.delete-movie-container:hover span {
+  color: #ff8787;
+}
+
+.delete-movie-container span {
+  color: #fff;
+}
+
+.heart-icon {
+  width: 20px;
+}
+.movie-image {
+  height: 100%;
+  min-height: 100%;
+  transition: 200ms;
+}
+
+.movie-image:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .result {
+    margin: 100px;
+  }
+}
